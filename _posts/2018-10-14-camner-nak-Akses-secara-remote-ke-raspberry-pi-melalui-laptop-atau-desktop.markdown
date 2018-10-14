@@ -9,15 +9,23 @@ tags: [Camner Nak, How to]
 ---
 Kebolehan untuk mengakses komputer secara remote melalui internet sangat penting dalam menjalankan pengurusan sistem komputer dengan berkesan dan efisien. Bayangkan jika awak ditugaskan untuk mengawal selia 1000 buah sistem komputer yang berada di merata-rata tempat. Pengaksesan secara remote bukan sahaja memudahkan tugasan awak, ia juga menjimatkan kos operasi syarikat. Bila kos operasi rendah, syarikat memperoleh keuntungan lebih, bonus pun dapat lebih. Untuk membolehkan raspberry pi menerima akses secara remote melalui wifi router dari komputer lain, aplikasi SSH perlu diaktifkan terlebih dahulu. Selepas itu awak perlu menyambungkan wifi raspberry pi ke wifi router tanpa memerlukan keyboard, mouse dan monitor, gimana dong?. Berikut adalah langkah-langkahnya:-
 
-* Perkakas yang diperlukan ialah, Wifi router, kabel ethernet, raspberry pi beserta wifi adapter, 5V USB power supply/power bank, SD card mini 16GB + Raspbian OS dan komputer/laptop.
-* Download dan install perisian Angry IP Scanner ke dalam komputer. Awak akan gunakan perisian ini untuk mengimbas dan mendapatkan IP address raspberry pi. Setiap komputer mesti memerlukan IP address iaitu suatu nombor ID yang unik untuk berkomunikasi. Bayangkan awak memanggil Rahman! di sebuah shopping komplex, mungkin ada lebih dari seorang akan menyahut. Berita baik, jika awak menginap di penjara, awak akan diberikan nombor id yang unik!
-* Jika awak menggunakan MS Windows. Saya cadangkan awak download perisian MobaXterm. Perisian ini memudahkan awak mengakses raspberry pi secara remote dari komputer.
+* Perkakas yang diperlukan ialah, Wifi router, kabel ethernet, raspberry pi beserta wifi adapter, 5V USB power supply/power bank,
+  SD card mini 16GB + Raspbian OS dan komputer/laptop.
+* Download dan install perisian Angry IP Scanner ke dalam komputer. Awak akan gunakan perisian ini untuk mengimbas dan mendapatkan
+  IP address raspberry pi. Setiap komputer mesti memerlukan IP address iaitu suatu nombor ID yang unik untuk berkomunikasi. Bayangkan awak memanggil Rahman! di sebuah shopping komplex, mungkin ada lebih dari seorang akan menyahut. Berita baik, jika awak menginap di penjara, awak akan diberikan nombor id yang unik!
+* Jika awak menggunakan MS Windows. Saya cadangkan awak download perisian MobaXterm. Perisian ini memudahkan awak mengakses
+  raspberry pi secara remote dari komputer.
 * Masukkan SD card yang telah dimuat dengan Raspbian OS melalui SD Card reader ke komputer. 
-* Klik masuk ke dalam SD card tersebut, seterusnya klik masuk ke dalam direktori /boot. Kemudian ciptakan satu text file kosong yang dinamakan ssh.
-* Ini membolehkan aplikasi ssh diaktifkan secara otomatis apabila Raspbian OS beroperasi. Aplikasi ssh membolehkan komputer dari luar mengakses masuk ke dalam raspberry pi.
-* Cucuk masuk power supply 5V pada raspberry pi untuk menghidupkan (boot up) Raspbian OS. Tunggu sehingga led hijau tidak berkelip-kelip lagi.
-* Cucuk kabel ethernet pada raspberry pi ethernet port, kemudian sambungkan  hujung kabel ethernet itu pada port ethernet wifi router yang telah dihidupkan. 
-* Sambungkan wifi connection komputer/laptop awak pada wifi router tersebut. Dengan ini komputer/laptop awak berada di dalam lingkungan jaringan komunikasi yang sama dengan raspberry pi. Run aplikasi Angry IP Scanner. Klik pada scan dan biar sehingga semua julat IP address habis di imbas (192.168.1.1 ~ 192.168.1.254). Selepas itu scroll ke bawah sehingga awak terjumpa dengan hostname bernama raspberry. Jika awak ada terjumpa, ambil nombor IP addressnya. Sebagai contoh, IP nya adalah 192.168.1.64.
+* Klik masuk ke dalam SD card tersebut, seterusnya klik masuk ke dalam direktori /boot. Kemudian ciptakan satu text file kosong
+  yang dinamakan ssh.
+* Ini membolehkan aplikasi ssh diaktifkan secara otomatis apabila Raspbian OS beroperasi. Aplikasi ssh membolehkan komputer dari
+  luar mengakses masuk ke dalam raspberry pi.
+* Cucuk masuk power supply 5V pada raspberry pi untuk menghidupkan (boot up) Raspbian OS. Tunggu sehingga led hijau tidak 
+  berkelip-kelip lagi.
+* Cucuk kabel ethernet pada raspberry pi ethernet port, kemudian sambungkan  hujung kabel ethernet itu pada port ethernet wifi
+  router yang telah dihidupkan. 
+* Sambungkan wifi connection komputer/laptop awak pada wifi router tersebut. Dengan ini komputer/laptop awak berada di dalam
+  lingkungan jaringan komunikasi yang sama dengan raspberry pi. Run aplikasi Angry IP Scanner. Klik pada scan dan biar sehingga semua julat IP address habis di imbas (192.168.1.1 ~ 192.168.1.254). Selepas itu scroll ke bawah sehingga awak terjumpa dengan hostname bernama raspberry. Jika awak ada terjumpa, ambil nombor IP addressnya. Sebagai contoh, IP nya adalah 192.168.1.64.
 
 
 ## Plaid ramps kitsch woke pork belly
