@@ -27,7 +27,7 @@ Kebolehan untuk mengakses komputer secara remote melalui internet sangat penting
 * Sambungkan wifi connection komputer/laptop awak pada wifi router tersebut. Dengan ini komputer/laptop awak berada di dalam
   lingkungan jaringan komunikasi yang sama dengan raspberry pi. Run aplikasi Angry IP Scanner. Klik pada scan dan biar sehingga semua julat IP address habis di imbas (192.168.1.1 ~ 192.168.1.254). Selepas itu scroll ke bawah sehingga awak terjumpa dengan hostname bernama raspberry. Jika awak ada terjumpa, ambil nombor IP addressnya. Sebagai contoh, IP nya adalah 192.168.1.64.
 
-       ![Angry Ip Scanner]({{site.baseurl}}/assets/img/angryipscan.jpg)
+![Angry Ip Scanner]({{site.baseurl}}/assets/img/angryipscan.jpg)
 
 
 ## Plaid ramps kitsch woke pork belly
