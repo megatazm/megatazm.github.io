@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Camner nak akses secara remote ke raspberry pi melalui laptop atau desktop
+title: Akses raspberry pi secara remote melalui laptop atau desktop
 date: 2018-10-14 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: i-rest.jpg # Add image post (optional)
