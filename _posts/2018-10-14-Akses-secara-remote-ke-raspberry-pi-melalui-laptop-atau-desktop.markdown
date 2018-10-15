@@ -11,8 +11,8 @@ Kebolehan untuk mengakses komputer secara remote melalui internet sangat penting
 
 * Perkakas yang diperlukan ialah, Wifi router, kabel ethernet, raspberry pi beserta wifi adapter, 5V USB power supply/power bank,
   SD card mini 16GB + Raspbian OS dan komputer/laptop.
-* Download dan install perisian [Angry IP Scanner](www.google.com) ke dalam komputer. Awak akan gunakan perisian ini untuk mengimbas dan mendapatkan
-  IP address raspberry pi. Setiap komputer mesti memerlukan IP address iaitu suatu nombor ID yang unik untuk berkomunikasi. Bayangkan awak memanggil Rahman! di sebuah shopping komplex, mungkin ada lebih dari seorang akan menyahut. Berita baik, jika awak menginap di penjara, awak akan diberikan nombor id yang unik!
+* Download dan install perisian [Angry IP Scanner](https://angryip.org/download/) ke dalam komputer. Awak akan gunakan perisian ini 
+  untuk mengimbas dan mendapatkan IP address raspberry pi. Setiap komputer mesti memerlukan IP address iaitu suatu nombor ID yang unik untuk berkomunikasi. Bayangkan awak memanggil Rahman! di sebuah shopping komplex, mungkin ada lebih dari seorang akan menyahut. Berita baik, jika awak menginap di penjara, awak akan diberikan nombor id yang unik!
 * Jika awak menggunakan MS Windows. Saya cadangkan awak download perisian MobaXterm. Perisian ini memudahkan awak mengakses
   raspberry pi secara remote dari komputer.
 * Masukkan SD card yang telah dimuat dengan Raspbian OS melalui SD Card reader ke komputer. 
