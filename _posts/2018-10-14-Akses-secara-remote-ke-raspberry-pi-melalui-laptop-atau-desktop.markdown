@@ -33,10 +33,10 @@ Syabas, awak sudah boleh mula untuk mengakses raspberry pi secara remote. Terus 
 
 Seterusnya, Run Terminal jika awak menggunakan linux atau mac, type command:-
 
-```bash
+`sh
 ssh pi@192.168.1.64
 Password: raspberry
-```
+`
 
 Tekan Enter
 
