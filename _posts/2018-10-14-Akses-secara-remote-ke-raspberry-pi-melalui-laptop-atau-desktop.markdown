@@ -13,7 +13,7 @@ Kebolehan untuk mengakses komputer secara remote melalui internet sangat penting
   SD card mini 16GB + Raspbian OS dan komputer/laptop.
 * Download dan install perisian [Angry IP Scanner](https://angryip.org/download/) ke dalam komputer. Awak akan gunakan perisian ini 
   untuk mengimbas dan mendapatkan IP address raspberry pi. Setiap komputer mesti memerlukan IP address iaitu suatu nombor ID yang unik untuk berkomunikasi. Bayangkan awak memanggil Rahman! di sebuah shopping komplex, mungkin ada lebih dari seorang akan menyahut. Berita baik, jika awak menginap di penjara, awak akan diberikan nombor id yang unik!
-* Jika awak menggunakan MS Windows. Saya cadangkan awak download perisian MobaXterm. Perisian ini memudahkan awak mengakses
+* Jika awak menggunakan MS Windows. Saya cadangkan awak download perisian [MobaXterm](http://download.mobatek.net/1092018073012523/MobaXterm_Installer_v10.9.zip). Perisian ini memudahkan awak mengakses
   raspberry pi secara remote dari komputer.
 * Masukkan SD card yang telah dimuat dengan Raspbian OS melalui SD Card reader ke komputer. 
 * Klik masuk ke dalam SD card tersebut, seterusnya klik masuk ke dalam direktori /boot. Kemudian ciptakan satu text file kosong
@@ -25,9 +25,22 @@ Kebolehan untuk mengakses komputer secara remote melalui internet sangat penting
 * Cucuk kabel ethernet pada raspberry pi ethernet port, kemudian sambungkan  hujung kabel ethernet itu pada port ethernet wifi
   router yang telah dihidupkan. 
 * Sambungkan wifi connection komputer/laptop awak pada wifi router tersebut. Dengan ini komputer/laptop awak berada di dalam
-  lingkungan jaringan komunikasi yang sama dengan raspberry pi. Run aplikasi Angry IP Scanner. Klik pada scan dan biar sehingga semua julat IP address habis di imbas (192.168.1.1 ~ 192.168.1.254). Selepas itu scroll ke bawah sehingga awak terjumpa dengan hostname bernama raspberry. Jika awak ada terjumpa, ambil nombor IP addressnya. Sebagai contoh, IP nya adalah 192.168.1.64.
+  lingkungan jaringan komunikasi yang sama dengan raspberry pi. Run aplikasi Angry IP Scanner. Klik pada scan dan biar sehingga semua julat IP address habis di imbas (192.168.1.1 ~ 192.168.1.254). Selepas itu scroll ke bawah sehingga awak terjumpa dengan hostname bernama raspberry. Jika awak ada terjumpa, ambil nombor IP addressnya. Sebagai contoh, seperti gambar di bawah IP nya adalah 192.168.1.64.
 
 ![Angry Ip Scanner]({{site.baseurl}}/assets/img/angryipscan.jpg)
+
+Syabas, awak sudah boleh mula untuk mengakses raspberry pi secara remote. Terus maju!
+
+Seterusnya, Run Terminal jika awak menggunakan linux atau mac, type command:-
+
+>ssh pi@192.168.1.64
+>Password: raspberry
+>Tekan Enter
+
+Awak sepatutnya telah berjaya mengakses masuk raspberry pi.
+
+Untuk windows, run MobaXterm, kemudian klik pada Session.
+
 
 
 ## Plaid ramps kitsch woke pork belly
