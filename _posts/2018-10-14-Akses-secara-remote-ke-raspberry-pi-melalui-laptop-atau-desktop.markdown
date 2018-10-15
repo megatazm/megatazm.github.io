@@ -33,16 +33,15 @@ Syabas, awak sudah boleh mula untuk mengakses raspberry pi secara remote. Terus 
 
 Seterusnya, Run Terminal jika awak menggunakan linux atau mac, type command:-
 
-```
+{% highlight ruby linenos %}
 ssh pi@192.168.1.64
 Password: raspberry
+{% endhighlight %}
+
 Tekan Enter
 
-```
 
-Awak sepatutnya telah berjaya mengakses masuk raspberry pi.
-
-Untuk windows, run MobaXterm, kemudian klik pada Session.
+Awak sepatutnya telah berjaya mengakses masuk raspberry pi. Untuk windows, run MobaXterm. Aplikasi MobaXterm seperi gambar di bawah akan dipaparkan. klik pada "Session".
 
 
 
