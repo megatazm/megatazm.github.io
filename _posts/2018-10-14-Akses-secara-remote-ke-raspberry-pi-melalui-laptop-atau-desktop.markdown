@@ -14,7 +14,7 @@ Kebolehan untuk mengakses komputer secara remote melalui internet sangat penting
 * Download dan install perisian [Angry IP Scanner](https://angryip.org/download/) ke dalam komputer. Awak akan gunakan perisian ini 
   untuk mengimbas dan mendapatkan IP address raspberry pi. Setiap komputer mesti memerlukan IP address iaitu suatu nombor ID yang unik untuk berkomunikasi. Bayangkan awak memanggil Rahman! di sebuah shopping komplex, mungkin ada lebih dari seorang akan menyahut. Berita baik, jika awak menginap di penjara, awak akan diberikan nombor id yang unik!
 * Jika awak menggunakan MS Windows. Saya cadangkan awak download perisian [MobaXterm](http://download.mobatek.net/1092018073012523/MobaXterm_Installer_v10.9.zip). Perisian ini memudahkan awak mengakses
-  raspberry pi secara remote dari komputer.
+  raspberry pi secara remote dari komputer windows.
 * Masukkan SD card yang telah dimuat dengan Raspbian OS melalui SD Card reader ke komputer. 
 * Klik masuk ke dalam SD card tersebut, seterusnya klik masuk ke dalam direktori /boot. Kemudian ciptakan satu text file kosong
   yang dinamakan ssh.
@@ -34,7 +34,9 @@ Syabas, awak sudah boleh mula untuk mengakses raspberry pi secara remote. Terus 
 Seterusnya, Run Terminal jika awak menggunakan linux atau mac, type command:-
 
 >ssh pi@192.168.1.64
+
 >Password: raspberry
+
 >Tekan Enter
 
 Awak sepatutnya telah berjaya mengakses masuk raspberry pi.
