@@ -38,10 +38,11 @@ ssh pi@192.168.1.64
 Password: raspberry
 `
 
-Tekan Enter
+Kemudian, tekan Enter.
 
+Awak sepatutnya telah berjaya mengakses masuk raspberry pi. Untuk windows, run MobaXterm. Aplikasi MobaXterm seperti gambar di bawah akan dipaparkan. klik pada "Session".
 
-Awak sepatutnya telah berjaya mengakses masuk raspberry pi. Untuk windows, run MobaXterm. Aplikasi MobaXterm seperi gambar di bawah akan dipaparkan. klik pada "Session".
+![MobaXterm]({{site.baseurl}}/assets/img/mobaxterm.jpg){: .center-image }
 
 
 
