@@ -30,7 +30,8 @@ Versi terkini adalah Raspberry Pi 3 model B+. Maklumat berkenaan model-model yan
 
 Kalau awak beli Rapsberry Pi 3, Wifi disertakan. Selain dari model ini awak kena beli wifi adapter yang sesuai, silalah tanya pakcik google, “usb wifi for raspberrypi”. untuk maklumat awak, saya menggunakan usb wifi adapter Aztech WL55USB dicucuk pada raspberrypi 2, sangat bagus resepsinya. Kalau nak beli jenis lain, belilah batang antenanya yang panjang jangan beli yang pendek sebab resepsinya mungkin lemah. Saya ada beli 2 bijik edimax usb wifi adapter, nampak cun tapi awak toksah beli lah yang ini.
 
-![USB Wifi Adapter]({{site.baseurl}}/assets/img/usbwifiadapter.jpg){: .center-image }
+![USB Wifi Adapter]({{site.baseurl}}/assets/img/usbwifiadapter.jpg){: .vertical-align}
+
 
 ### SD Card 16Gb (RM20)
 
@@ -99,33 +100,36 @@ Perisian node-red ini telah siap sedia dipasang pada sistem operasi Raspbian. No
 
 ### Daftar akaun platerecognizer.com
 
-Kita bernasib baik sebab telah adanya servis perisian pengecaman nombor plat kereta percuma (percuma 2500 ~ 5000 permintaan untuk pengecaman dalam sebulan) melalui cloud API request. Menatang apa tu? Kepada yang tak sabar-sabar ingin tahu, sila rujuk disini. 
+Kita bernasib baik sebab telah adanya servis perisian pengecaman nombor plat kereta percuma (percuma 2500 ~ 5000 permintaan untuk pengecaman dalam sebulan) melalui cloud API request. [Camaner tu..]({% post_url 2018-10-17-Projek-IoT-Sistem-Pengecaman-Plat-Kereta %})
 
 ### Notification push account (Twitter, email or others using node-red)
 
 Saya sudah ada akaun gmail.com untuk kegunaan harian selain akaun email tempat kerja saya. Untuk menghantar notifikasi daripada aplikasi node-red, saya cadangkan awak buka akaun yahoo mail yang baru. Selain notifikasi melalui emel, node-red juga membolehkan anda menghantar notifikasi ke akaun twitter.
 
+### Mari kita mula membina
+
+Ok. Jika semuanya sudah disediakan. Kita boleh mula membangunkan projek ini. Sambil membina sambil menyambung-yambungkan neuron-neuron otak awak tu lalu memperoleh kefahaman. Learning by Doing!!.
+
+Setelah awak selesai memasukkan OS Raspbian ke dalam SD Card. [Camaner nak buat tu...] Cucuk masuk SD card tu pada raspberry pi, boleh boot up raspberry pi tu dengan mencucuk masuk 5V power supply dan wifi adapter jika awak tidak guna raspberry pi 3. Selepas itu awak akses masuk ke dalam OS raspberry pi secara remote melalui laptop atau komputer awak. [Camaner nak buat tu..]({% post_url 2018-10-14-Akses-secara-remote-ke-raspberry-pi-melalui-laptop-atau-desktop %}) Awak juga perlu boleh mengakse
+
+
+
+enable vnc server raspi-config
+install vnc client
+start node-red
+enable node-red
+
+Flowchart system
+Import Nodered Flow
+Explain the overall system
+
+Start from scratch
+
+1. use injector node.. trigger curl api function node. get sample car plat
 
 
 
 
-
-
-<br/>
-<br/>
-![Raspberry pi interface]({{site.baseurl}}/assets/img/raspi-interface.jpg){: .center-image }
-<br/>
-<br/>
-
-Sambungkan HDMI-VGA adaptor pada hujung kabel HDMI, kemudian sambungkannya pada kabel VGA screen monitor. Masukkan SD card mini yang sudah dimuatkan dengan Raspbian OS. Sambungkan 5V USB power supply/power bank pada raspberry micro usb connector. Selepas switch on power supply 5V,  lampu LED raspberry pi akan berkelip-kelip dan awak sepatutnya dapat melihat raspbian desktop seperti gambar di bawah di paparkan di skrin monitor.
-
-<br/>
-<br/>
-![Raspberry OS]({{site.baseurl}}/assets/img/raspbian-os.jpg){: .center-image }
-<br/>
-<br/>
-
-Jika raspbian desktop telah dipaparkan, awak sepatutnya boleh mengerakkan mouse cursor dan menggunakan keyboard. Ok, awak sudah berjaya! Tapi kan, kalau awak ada 100 raspberry pi yang setiap satunya berapa di tempat yang berbeza dan berjarak  jauh di antara satu sama lain, macam mana? Ketika ini lah akses secara remote melalui internet memudahkan urusan. Awak boleh mengakses kesemua 100 raspberry pi itu dari satu lokasi sahaja. Camaner yek nak akses remote.
 
 
 
