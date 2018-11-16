@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Projek IoT, Sistem Pengecaman Plat Kereta
+title: Projek IoT, Sistem Pengecaman Plat Kereta - Bahagian 1
 date: 2018-10-17 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: i-rest.jpg # Add image post (optional)
@@ -16,7 +16,7 @@ Ada kalanya walaupun ianya dalam bahasa Inggeris, tetapi ada juga yang urutan tu
 Awak sudah bersedia kan? Lepasi halangan kedua dahulu. Ya, halangan pertama telahpun bermula, iaitu awak telah membaca hingga ke titik ini, teruskan membaca tanpa jemu. Seterusnya, awak perlukan komitmen seperti berikut. Amacam ada brani?
 
 
-### Raspberry Pi (RM130 ~ 160)
+### Raspberry Pi 
 
 Versi terkini adalah Raspberry Pi 3 model B+. Maklumat berkenaan model-model yang lain yang boleh di rujuk di sini https://www.raspberrypi.org/products/. Kalau tak mampu ke Jalan Pasar, KL,  Bolehlah tanya pakcik google ataupun encik Lazada. Kalau ndak belajar duit boleh diusahakan. Alang-alang belilah model terkini. Cubalah minta dari mak atau bapak, saya yakin mereka akan belikan, daripada awak minta mereka belikan IPhone, jangan harap lah.
 
@@ -26,14 +26,12 @@ Versi terkini adalah Raspberry Pi 3 model B+. Maklumat berkenaan model-model yan
 <br/>
 <br/>
 
-### Wifi usb adapter (RM25)
+### Wifi usb adapter 
 
 Kalau awak beli Rapsberry Pi 3, Wifi disertakan. Selain dari model ini awak kena beli wifi adapter yang sesuai, silalah tanya pakcik google, “usb wifi for raspberrypi”. untuk maklumat awak, saya menggunakan usb wifi adapter Aztech WL55USB dicucuk pada raspberrypi 2, sangat bagus resepsinya. Kalau nak beli jenis lain, belilah batang antenanya yang panjang jangan beli yang pendek sebab resepsinya mungkin lemah. Saya ada beli 2 bijik edimax usb wifi adapter, nampak cun tapi awak toksah beli lah yang ini.
 
-![USB Wifi Adapter]({{site.baseurl}}/assets/img/usbwifiadapter.jpg){: .vertical-align}
 
-
-### SD Card 16Gb (RM20)
+### SD Card 16Gb 
 
 Memory card ini perlu untuk kita pasangkan Sistem Operasinya, Kita akan guna Raspbian OS, bukan Microsoft Windows OS tau!. Awak kena tahu macam mana nak set up sistem operasi raspbian ke dalam SD card, kalau tak tahu bolehlah ikut arahannya di sini. 
 
@@ -41,14 +39,12 @@ Memory card ini perlu untuk kita pasangkan Sistem Operasinya, Kita akan guna Ras
 
 Kita perlukan ini untuk power up raspberry pi. Kalau awak ada usb power bank atau android handphone charger. Kira jimatlah, takyah beli. Kalau takda pinjam mak atau bapak punya dahulu.
 
-### Camera module (RM 35)
+### Camera module 
 
 Camera modul untuk menangkap gambar kereta kemudian dihantar ke sistem pengecaman nombor plate. Kita beli yang versi paling murah pun ok, Camera Module V1.3 , 5MP.
 
-![Pi Camera]({{site.baseurl}}/assets/img/pi-camera.jpg){: .center-image }
 
-
-### HC-SR501 PIR Sensor (RM15) atau Ultrasonic HC-SR04 sensor
+### HC-SR501 PIR Sensor atau Ultrasonic HC-SR04 sensor
 
 PIR sensor ini digunakan untuk mengesan kehadiran objek yang mengeluarkan haba bergerak dalam lingkungan jarak 3 - 7 meter. Selain itu ia juga boleh mengesan manusia atau haiwan. Apabila ada objek yang bergerak dikesan oleh pir sensor ini, raspberry pi melalui aplikasi node-red akan menerima isyarat tersebut kemudian mengarahkan camera untuk menangkap gambar. Namun memandangkan ia mengesan kehadiran objek dalam linkungan ruang yang besar, pir sensor ini mungkin akan kerap mengesan objek-objek dipersekitaran. Oleh itu saya rasa adalah lebih baik kita mengguna ultrasonic sensor. Ultrasonic sensor pada setiap detik tertentu memancar gelombang bunyi dengan lebih fokus ke arah sesuatu objek yang hendak kita kesan di hadapan. Gelombang bunyi ini akan terpantul kembali kepada ultrasonic sensor jika pancaran gelombang tersebut mengenai sesuatu objek. Dengan menggunakan formula fizik iaitu Jarak = Laju x Masa. Kita boleh mengukur jarak objek tersebut dengan mengukur masa gelombang itu terpantul kembali ke ultrasonic sensor. Bagi memperoleh jaraknya, masa tersebut didarabkan dengan kelajuan gelombang bunyi, seperti contoh:
 
@@ -96,7 +92,7 @@ Awak perlukan kabel ini jika awak hendak mengakses masuk untuk mengawal raspberr
 
 ### Raspbian with Node-red
 
-Perisian node-red ini telah siap sedia dipasang pada sistem operasi Raspbian. Node-red adalah aplikasi yang dicipta sebagai alat pengaturcaraan secara visual dengan konsep click, drag, drop,connect, set dan deploy tanpa perlu melakukan sebarang pengaturcaraan. Namun untuk membina sesuatu sistem yang komplex, anda masih perlu melakukan pengaturcaraan, tetapi ia boleh dilakukan dengan pantas dan mudah. Jika anda ingin tahu secara asas berkenaan node-red, sila lah rujuk disini.
+Perisian node-red ini telah siap sedia dipasang pada sistem operasi Raspbian. Node-red adalah aplikasi yang dicipta sebagai alat pengaturcaraan secara visual dengan konsep click, drag, drop, connect, set dan deploy tanpa perlu melakukan sebarang pengaturcaraan. Namun untuk membina sesuatu sistem yang komplex, anda masih perlu melakukan pengaturcaraan, tetapi ia boleh dilakukan dengan pantas dan mudah. Jika anda ingin tahu secara asas berkenaan node-red, sila lah rujuk [di sini]({% post_url 2018-11-13-Pengenalan-aplikasi-node-red %}).
 
 ### Daftar akaun platerecognizer.com
 
@@ -106,26 +102,15 @@ Kita bernasib baik sebab telah adanya servis perisian pengecaman nombor plat ker
 
 Saya sudah ada akaun gmail.com untuk kegunaan harian selain akaun email tempat kerja saya. Untuk menghantar notifikasi daripada aplikasi node-red, saya cadangkan awak buka akaun yahoo mail yang baru. Selain notifikasi melalui emel, node-red juga membolehkan anda menghantar notifikasi ke akaun twitter.
 
-### Mari kita mula membina
-
-Ok. Jika semuanya sudah disediakan. Kita boleh mula membangunkan projek ini. Sambil membina sambil menyambung-yambungkan neuron-neuron otak awak tu lalu memperoleh kefahaman. Learning by Doing!!.
-
-Setelah awak selesai memasukkan OS Raspbian ke dalam SD Card. [Camaner nak buat tu...] Cucuk masuk SD card tu pada raspberry pi, boleh boot up raspberry pi tu dengan mencucuk masuk 5V power supply dan wifi adapter jika awak tidak guna raspberry pi 3. Selepas itu awak akses masuk ke dalam OS raspberry pi secara remote melalui laptop atau komputer awak. [Camaner nak buat tu..]({% post_url 2018-10-14-Akses-secara-remote-ke-raspberry-pi-melalui-laptop-atau-desktop %}) Awak juga perlu boleh mengakse
 
 
 
-enable vnc server raspi-config
-install vnc client
-start node-red
-enable node-red
 
-Flowchart system
-Import Nodered Flow
-Explain the overall system
+Ok sampai di sini sahaja untuk bahagian 1. Untuk bahagian yang seterusnya sila ke [sini]({% post_url 2018-11-8-Projek-IoT-Sistem-Pengecaman-Plat-Kereta-B2 %})
 
-Start from scratch
 
-1. use injector node.. trigger curl api function node. get sample car plat
+
+
 
 
 
