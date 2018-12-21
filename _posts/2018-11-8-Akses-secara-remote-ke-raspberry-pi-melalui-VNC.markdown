@@ -10,7 +10,7 @@ tags: [Camaner, How to]
 
 
 VNC adalah Virtual Network Computing yang membolehkan awak mengongsikan interface grafik komputer (Server) kepada komputer lain (Client) secara remote. Awak perlu memasang aplikasi VNC server pada rasbperry pi dan aplikasi VNC client pada laptop awak. Melalui aplikasi VNC server ini, interface grafik OS Raspbian boleh diakses melalui laptop awak. Cuma tindakbalasnya mungkin sedikit lag jika ramai orang menggunakan sambungan 
-wifi yang sama. Untuk mengaktifkan VNC servis pada rasberry pi, masukkan command ini di terminal awak (jika awak pakai windows silalah pakai aplikasi MobaXterm)
+wifi yang sama. Untuk mengaktifkan VNC servis pada raspberry pi, masukkan command ini di terminal awak (jika awak pakai windows silalah pakai aplikasi MobaXterm)
 
 ```javascript
 ssh pi@<ip_address_pi_awak>

@@ -23,7 +23,7 @@ Apa itu VirtualBox? Ia adalah aplikasi "Hypervisor" yang membolehkan pelbagai je
 2. Muat-turun dan install VirtualBox dan Extension Pack
 ```
 
-### Mengkonfigurasikan dan melancarkan VM Linux OS dalam VirtualBox
+### Mengkonfigurasi dan melancarkan VM Linux OS dalam VirtualBox
 
 ```javascript
 1. Muat-turun image OS Linux
@@ -71,6 +71,8 @@ Proses pemasangan VirtualBox atas windows memang sangat mudah. Mengikut turutan 
 ```
 <br/>
 Selesai!
+
+Jalankan VirtualBox.
 <br/>
 <br/>
 Seterusnya untuk memasang ["VirtualBox Extension Pack"](https://www.virtualbox.org/wiki/Downloads), download dahulu softwarenya. Klik pada **All supported platform**. (pastikan nombor versinya sama dengan software Virtualbox yang awak download)
@@ -165,7 +167,7 @@ Untuk memasang CentOS, di virtualbox klik "Start" (Simbol Anak panah hijau). Iku
 {: refdef}
 <br/>
 
-Proses pemasangan bermula sejurus sahaja awak klik "Start". Selepas awak pemilih bahasa untuk OS ini, proses akan terhenti bagi memperolehi input daripada awak melalui interface Centos 7 INSTALLATION SUMMARY seperti gambar di bawah.
+Proses pemasangan bermula sejurus sahaja awak klik "Start". Selepas awak memilih bahasa untuk OS ini, proses akan terhenti bagi memperolehi input daripada awak melalui interface Centos 7 INSTALLATION SUMMARY seperti gambar di bawah.
 
 <br/>
 {:refdef: style="text-align: center;"}
@@ -176,7 +178,7 @@ Proses pemasangan bermula sejurus sahaja awak klik "Start". Selepas awak pemilih
 Masukkan maklumat seperti berikut:-
 
 ```javascript
-Installation Destination: ATA VBOX HARD DISK > Klik Done
+Installation Destination: ATA VBOX HARD DISK 20GB > Klik Done
 Software Selection: GNOME Desktop > klik Done
 Network & Hostname: Ethernet (enp0s3) > set ON > Klik Done
 Klik > Begin Installation
@@ -185,7 +187,7 @@ ROOT PASSWORD: apaapajer > Klik 2x Done
 USER CREATION: Username: user Password: apapapajer > Klik 2x Done
 Tunggu sehingga pemasangan selesai, kemudian Klik > Reboot. 
 ```
-Oh ya. Jika awak nak keluarkan cursor dari dalam VM ke komputer host, tekan keyboard "Ctrl" Windows atau "Command" untuk MacOS.
+Oh ya. Jika awak nak keluarkan cursor dari dalam VM ke komputer host, tekan keyboard "Ctrl" untuk Windows atau "Command" untuk MacOS.
 <br/>
 {:refdef: style="text-align: center;"}
 ![disk-utility-mac2]({{site.baseurl}}/assets/img/vm-centos-reboot.png)
