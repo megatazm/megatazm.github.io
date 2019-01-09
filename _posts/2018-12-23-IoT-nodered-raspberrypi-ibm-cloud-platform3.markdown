@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Membina Aplikasi IoT dengan Node-RED di atas IBM Cloud Platform - Bab 3. Pengenalan Node-RED
+title: Membina Aplikasi IoT dengan Node-RED di atas IBM Cloud Platform - Bab 3. Pengenalan Node-RED (1)
 date: 2018-12-22 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: i-rest.jpg # Add image post (optional)
@@ -10,8 +10,17 @@ tags: [Camaner, How to, IoT]
 
 ### Node-RED Flow Editor
 
-Jika awak telah mengikuti artikel [sebelum ini]({% post_url 2018-12-14-IoT-nodered-raspberrypi-ibm-cloud-platform2 %}), Node-RED flow editor sepatutnya telah siap sedia berada di depan awak untuk di godek. Sebelum itu, saya berikan sedikit penerangan berkenaan interface Node-RED flow editor ini.
+Jika awak telah mengikuti artikel [sebelum ini]({% post_url 2018-12-14-IoT-nodered-raspberrypi-ibm-cloud-platform2 %}), Node-RED flow editor sepatutnya telah siap sedia berada di depan awak berserta dengan flow contoh di atas kanvas Flow 1 seperti gambar di bawah. Jika awak bermula dengan kanvas Flow 1 yang kosong, awak boleh mengimport masuk flow contoh IBM bluemix tersebut melalui langkah berikut.
 
+```javascript
+1. Pergi ke [sini]( https://github.com/megatazm/node-red-code/blob/master/flowsample-ibmbluemix.txt )
+2. Klik > Raw. Kemudian "Click Drag dan Copy (Ctrl+C)" semua maklumat dari situ
+2. Klik > hamburger ikon (di bucu kanan atas) > Import > Clipboard
+3. Paste (Ctrl+V) 
+4. Klik > Import
+```
+
+Sebelum kita bermula menggodek, saya berikan sedikit penerangan berkenaan interface Node-RED flow editor ini.
 <br/>
 {:refdef: style="text-align: center;"}
 ![nodered-interface2]({{site.baseurl}}/assets/img/nodered-interface2.png)
@@ -154,7 +163,7 @@ Ok jom kita buat sedikit analisis pada kod di barisan 12, 13, 14 dan 15 tadi sat
 ```javascript
 12: var counter1 = context.get('counter1')||0;
 ```
-Kod **var counter1** ini mengarahkan supaya komputer mencipta variable **counter1** di memori RAM. Manakala kod **context.get('counter1')||0** pula mengarahkan supaya memdapatkan nilai daripada variable **counter1**. Jika variable **counter1** masih belum menyimpan apa-apa nilai, maka masukkan nilai **0** sebagai nilai permulaan. Kemudian, nilai **0** ini disimpankan ke dalam variable **counter1** dengan menggunakan symbol operator "**=**".
+Kod **var counter1** ini mengarahkan supaya komputer mencipta variable **counter1** di memori RAM. Manakala kod **context.get('counter1')||0** pula mengarahkan supaya mendapatkan nilai daripada variable **counter1**. Jika variable **counter1** masih belum menyimpan apa-apa nilai, maka masukkan nilai **0** sebagai nilai permulaan. Kemudian, nilai **0** ini disimpankan ke dalam variable **counter1** dengan menggunakan symbol operator "**=**".
 
 ```javascript
 13: counter1 = counter1+1;
@@ -180,7 +189,109 @@ Seterusnya untuk penghabisan kod ini. Barisan Kod ke-18 hingga ke-32 adalah untu
 
 ### Menghantar Mesej ke Nod Input IBM IoT
 
-Jika sebelum ini awak telah mesej ke panel debug, kali kita akan gunakan Nod Output IBM IoT untuk menghantar ke Nod Input IBM IoT. Secara praktikalnya, awak boleh menghantar mesej dari satu peranti ke satu peranti yang lain dengan menggunakan nod output dan input IBM IoT ini. Untuk tujuan latihan cuba guna, saya tunjukkan cara penggunaanya di atas cloud platform yang sama.
+Jika sebelum ini awak telah hantar mesej output ke panel debug, kali kita akan gunakan Nod Output IBM IoT untuk menghantar ke Nod Input IBM IoT. Secara praktikalnya, awak boleh menghantar mesej dari satu peranti ke satu peranti yang lain dengan menggunakan nod output dan nod input IBM IoT ini. Untuk tujuan latihan cuba-guna, di sini saya tunjukkan cara penggunaanya di atas cloud platform sahaja. Sila ikut arahan seperti di bawah.
+
+```javascript
+1. Klik 2 kali > nod [Send to IBM IoT Platform] 
+2. Copy (Ctrl+C) "LivingRoomThermo1" dari Device Id
+3. Klik 2 Kali > nod [IBM IoT App In]
+4. Pilih > Authentication: Quickstart
+5. Paste (Ctrl+V) "LivingRoomThermo1" pada Device Id
+6. Klik > Done
+6. Aktifkan nod debug [device data] dan nyahaktifkan nod debug [Debug ouput payload]
+7. Klik > Deploy > Send
+```
+
+Belum sempat saje awak nak klik > nod [Send Data], mesej seperti imej di bawah,   bertalu-talu muncul di panel debug.  
+
+<br/>
+{:refdef: style="text-align: center;"}
+![debug-ibmiotinput]({{site.baseurl}}/assets/img/debug-ibmiotinput.png)
+{: refdef}
+<br/>
+
+Untuk memberhentikan mesej itu,
+
+```javascript
+1. Klik 2 kali >  nod [IBM IoT App In]
+2. Pilih > Authentication: Bluemix Service atau Padam "LivingRoomThermo1" dari Device Id
+3. Klik > Done > Deploy
+```
+
+Untuk aktiviti yang penghabisan, ikut arahan di bawah.
+
+```javascript
+1. Nyahaktifkan nod debug [device data] dan aktifkan nod debug [cpu status]
+2. Klik 2 kali >  nod [IBM IoT App In]
+3. Pilih > Authentication: Quickstart atau taipkan "LivingRoomThermo1" pada Device Id
+4. Klik > Done > Deploy
+```
+
+Awak akan dapat mesej seperti di bawah. Mesej di bawah dihasilkan oleh 3 jenis nod. Klik pada panel info dan klik pada nod temp, nod temp thresh, nod safe dan danger. Dari maklumat **Type**, awak akan tahu nod temp ialah nod function, nod temp tresh ialah nod switch manakala nod safe dan danger ialah nod template.
+
+<br/>
+{:refdef: style="text-align: center;"}
+![debug-ibmiotinput]({{site.baseurl}}/assets/img/debug-ibmiotcpustatus.png)
+{: refdef}
+<br/>
+
+Jika awak perhatikan mesej pada panel debug dengan lebih teliti, awak akan dapati bahawa nod-nod itu menerima data daripada nod input IBM IoT kemudian memeriksa maklumat berkenaan **temp** dan memastikan samada nilai **temp** adalah dalam lingkungan selamat atau tidak. Tapi hasil yang awak perolehi kesemuanya adalah "**Temperature (23) within safe limits**" bermaksud semuanya adalah selamat. Mengapa?
+
+Ok. Jom kita periksa nod-nod ini satu persatu mengikut aliran dari kiri ke kanan. Pertama, klik 2 kali > nod function [temp]. Awak akan nampak kod seperti di bawah.
+
+```javascript
+return {payload:msg.payload.d.temp};
+```
+
+Seperti yang awak sudah tahu, dalam nod function mesti ada kod javascript. Cuma kali ini kodnya sebaris sahaja. Apa yang kod ini buat ialah ia mengakses data format JSON yang berada dalam kantung payload melalui msg > payload > d > temp (Cer awak tengok kod dalam nod Device payload semula dan bandingkan). Kod **return** pula mengarahkan supaya nilai di dalam temp ketika ini disalurkan ke nod seterusnya yang berada di sebelah kanan iaitu nod switch [temp thresh].
+
+Kedua, klik 2 kali > nod switch [temp thresh]. Awak akan dipaparkan dengan interface konfigurasi seperti di bawah.
+
+<br/>
+{:refdef: style="text-align: center;"}
+![nodered-switchnode]({{site.baseurl}}/assets/img/nodered-switchnode.png)
+{: refdef}
+<br/>
+
+Tetapan **msg.payload** bermaksud nod ini menerima input dari mesej msg.payload yang disalurkan oleh nod yang disebelah kirinya iaitu **nod temp**. Kemudian awak akan dapati ada 2 syarat untuk suis 2 hala ini bagi menentukan sama ada aliran mesej ini mengalir ke output pertama atau kedua (awak boleh tambah seberapa banyak output yang awak perlukan). 
+
+2 syarat-syarat yang menentukan aliran itu adalah seperti berikut.
+
+```javascript
+1. Jika nilai temp yang diperolehi daripada nod temp lebih kecil atau sama juga dengan ("<=") nilai 40, pergi ke output 1.
+2. Jika nilai temp yang diperolehi daripada nod temp lebih besar daripada (">") nilai 40, pergi ke output 2.
+```
+
+Fungsi nod switch ini sebenarnya sama dengan penyataan **if else** dalam bahasa pengaturcaraan traditional seperti dalam C, Java, Javascript dan lain-lainnya. Node-RED memudahkan prosesnya tanpa perlu untuk mengaturcara **if else** tersebut. Cuba awak periksa nilai dalam array pada kod di nod **Device payload** ataupun pada jadual **Index, Elemen temp, Elemen humidity** di atas. Ada awak jumpa elemen yang nilainya adalah 40 dan ke atas? Awak akan dapati yang kesemua nilainya adalah lebih kecil daripada 40 kan? Sebab itulah kesemua mesej yang dihasilkan adalah "**Temperature () within safe limits**". Ini adalah kerana kesemua mesej telah dialirkan ke output 1 sahaja. Cuba klik 2 kali pada **nod safe**, awak akan nampak templat seperti berikut.
+
+```javascript
+Temperature ({`{payload}}) within safe limits
+```
+
+Fungsi nod template ini adalah sama macam fungsi kod  **printf()** dalam bahasa C dan lain-lain juga. Di sini perkataan templatnya adalah "**Temperature  ......  within safe limits**". Manakala **({\{payload}})** pula adalah nilai pembolehubah **temp** yang disalurkan oleh **nod temp** tadi melalui payload (Sila lihat pada contoh output di panel debug tadi seperti di atas).
+
+Untuk membolehkan mesej pada nod **temp thresh** dialirkan ke **output 2** (ke **nod danger**), awak kena ubah nilai pada syarat di nod switch. Berdasar elemen-element dari array tadi cuba cari nilai maximumnya. Sila rujuk pada jadual **Index, Elemen temp, Elemen humidity** di atas. Saya dapati nilai maximumnya adalah **temp=24**. Dengan ini saya cadangkan kita set nilai "threshold"nya pada **20**.
+
+<br/>
+{:refdef: style="text-align: center;"}
+![debug-dangernode]({{site.baseurl}}/assets/img/debug-dangernode.png)
+{: refdef}
+<br/>
+
+Cuba awak lihat hasil output pada panel debug seperti di atas. Awak akan nampak mesej amaran seperti "**Temperature (24) critical**" jika nilai temp adalah lebih besar daripada 20. Jika nilai temp adalah 20 dan ke bawah, awak akan dapat mesej selamat seperti “**Temperature (20) within safe limits**”. Untuk kepastian, cuba awak **klik 2 kali > nod danger**. Apakah awak nampak? Awak tak terkejutkan? Memang dalam jangkaan awak, betul tak?
+
+Ok ada satu tugasan mudah yang saya nak awak buat. Lakukan prosedur seperti di bawah.
+
+```javascript
+1. Aktifkan kesemua nod debug (nod Debug output, device data, dan cpu status)
+2. Pastikan tetapan nod IBM IoT pada Authentication: Quickstart dan Device Id:"LivingRoomThermo1" 
+3. Klik > Done > Deploy
+4. Klik nod [Send Data] sebanyak 10 kali
+```
+Setelah awak membiarkannya selama 5 saat, hentikan paparan mesej di panel debug itu (Awak dah tau camaner nak buat kan). Persoalan yang awak perlu selesaikan, macam mana awak nak kenal pasti mesej yang dipaparkan pada panel debug itu datangnya dari nod **debug output**, **device data** dan **cpu status**? Cuba awak buat kajian sikit maklumat pada panel debug.
+
+Syabas! Saya harap awak sudahpun berjaya memperolehi serba sedikit ilmu asas berkenaan aplikasi IoT node-RED ini. Seterusnya, jom kita belajar sedikit lagi ilmu asas tambahan berkenaan penggunaan node-RED ini yang perlu awak kuasai. Untuk itu sila ke sini.
+
 
 
 
