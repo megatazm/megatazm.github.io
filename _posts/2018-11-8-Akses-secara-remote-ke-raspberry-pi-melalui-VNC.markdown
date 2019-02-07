@@ -3,7 +3,7 @@ layout: post
 title: Akses Secara Remote Desktop ke Raspberry Pi Melalui VNC 
 date: 2018-11-8 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: i-rest.jpg # Add image post (optional)
+img: iot-background-imej.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Camaner, How to]
 ---
@@ -86,7 +86,7 @@ Kemudian login masuk ke raspi awak:
 <br/>
 Sejurus sahaja awak klik OK, interface grafik Raspbian OS Desktop akan terpapar di depan mata seperti gambar di bawah. Untuk membebaskan raspi awak daripada network cable yang disambungkan pada wifi router, klik pada simbol yang ditunjukkan oleh anak panah berdarah seperti gambar di bawah. Kemudian pilih nama SSD router wifi yang telah awak sediakan. Jika awak cabut wayar network tersebut, sambungan VNC awak akan terputus. Awak perlu mengulangi langkah yang sebelum ini, menggunakan angryip scanner untuk memperolehi IP address yang baru, [Camaner yek]({% post_url 2018-10-14-Akses-secara-remote-ke-raspberry-pi-melalui-laptop-atau-desktop %}). Selepas IP address baharu telah diperolehi, awak perlu mengulangi semula langkah di atas, menggunakan VNC Viewer untuk mengakses masuk ke dalam raspi melalui sambungan wifi. 
 
-Ya, raspi awak sudah bebas!
+Ya, raspi awak sudah bebas! ( ᐛ )و
 <br/>
 <br/>
 {:refdef: style="text-align: center;"}

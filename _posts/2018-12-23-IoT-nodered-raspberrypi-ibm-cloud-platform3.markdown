@@ -3,7 +3,7 @@ layout: post
 title: Membina Aplikasi IoT dengan Node-RED di atas IBM Cloud Platform - Bab 3. Pengenalan Node-RED (1)
 date: 2018-12-22 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: i-rest.jpg # Add image post (optional)
+img: iot-background-imej.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Camaner, How to, IoT]
 ---
@@ -15,7 +15,7 @@ Jika awak telah mengikuti artikel [sebelum ini]({% post_url 2018-12-14-IoT-noder
 ```javascript
 1. Pergi ke [sini]( https://github.com/megatazm/node-red-code/blob/master/flowsample-ibmbluemix.txt )
 2. Klik > Raw. Kemudian "Click Drag dan Copy (Ctrl+C)" semua maklumat dari situ
-2. Klik > hamburger ikon (di bucu kanan atas) > Import > Clipboard
+2. Klik > ikon hamburger (di bucu kanan atas) > Import > Clipboard
 3. Paste (Ctrl+V) 
 4. Klik > Import
 ```
@@ -71,7 +71,7 @@ Pastikan ada mesej **successfully deployed** dipamerkan selepas awak klik butang
    saat, Klik > 2 kali nod [Send Data], kemudian setkan Repeat:"interval".  
 6. Klik > Done > Deploy > Send
 ```
-Mesej akan melimpah-limpah keluar di panel debug. Klik **> ikon tong sampah** di panel debug untuk memadamkan mesej-mesej itu. Tapi, mesej masih lagi keluar mencurah-curah setiap 1 saat. Macam mana yek nak hentikannya? Bak kata pelawak si Nabil tu. Lu pikirlah sendiri!
+Mesej akan melimpah-limpah keluar di panel debug. Klik **> ikon tong sampah** di panel debug untuk memadamkan mesej-mesej itu. Tapi, mesej masih lagi keluar mencurah-curah setiap 1 saat. Macam mana yek nak hentikannya? Bak kata pelawak si Nabil tu. Lu pikirlah sendiri! <(^,^)>
 
 ### Mesej Output Payload 
 
@@ -122,7 +122,7 @@ return msg;
 
 Kepada yang tidak pernah belajar programming atau pengaturcaraan, mungkin awak tidak mengerti maksud bait-bait perkataan bahasa Inggeris seperti yang dinyatakan di atas. Kepada yang pernah belajar programming, saya rasa kod javascript di atas ini agak mudah untuk awak fahami. Takpa, kepada yang tak mengerti hal programming, awak ikut jer. Sebabnya cara untuk belajar programming adalah dengan melakukannya, Learning by Doing! Mula-mula meniru contoh, menghafal dan memodifikasikan kod mengikut keperluan. Awak tak perlu pun ada keputusan exam 10A untuk jadi seorang programmer yang mahir. Janji, awak sanggup berusaha dengan semangat kesabaran dan keazaman yang tinggi. 
 
-Pertama sekali, cuba awak bandingkan data **longitude** dan **latitude** yang di dalam JSON dengan kod yang di dalam nod function (kod di barisan ke-2 dan ke-3). Awak akan dapati nilai **-98.49** dan **29.42** masing-masing disimpankan ke dalam variable atau pembolehubah **longitude1** dan **latitude1**. Seterusnya, cuba awak lihat pada barisan kod yang ke-6 dan ke-9. Awak akan dapati 2 jajaran nombor dengan jujukan yang berbeza-beza ini masing-masing disimpankan ke dalam variable atau pembolehubah **temp1** dan **humidity1**. Jajaran nombor ini di panggil **Array**. Cuba awak klik butang nod [Send Data] berulang kali sebanyak 11 kali. Bandingkan nilai-nilai **longitude**, **latitude**, **temp** dan **humidity** yang awak perolehi di panel debug dengan kod di barisan 2,3,6 dan 9. Cuba fikirkan sejenak. Ada mentol menyala dalam minda awak sekarang?
+Pertama sekali, cuba awak bandingkan data **longitude** dan **latitude** yang di dalam JSON dengan kod yang di dalam nod function (kod di barisan ke-2 dan ke-3). Awak akan dapati nilai **-98.49** dan **29.42** masing-masing disimpankan ke dalam variable atau pembolehubah **longitude1** dan **latitude1**. Seterusnya, cuba awak lihat pada barisan kod yang ke-6 dan ke-9. Awak akan dapati 2 jajaran nombor dengan jujukan yang berbeza-beza ini masing-masing disimpankan ke dalam variable atau pembolehubah **temp1** dan **humidity1**. Jajaran nombor ini di panggil **Array**. Cuba awak klik butang nod [Send Data] berulang kali sebanyak 11 kali. Bandingkan nilai-nilai **longitude**, **latitude**, **temp** dan **humidity** yang awak perolehi di panel debug dengan kod di barisan 2,3,6 dan 9. Cuba fikirkan sejenak. Ada mentol menyala dalam minda awak sekarang? ≧◉◡◉≦
 
 Jika perhatikan betul-betul nilai-nilai pada panel debug, awak akan dapati nilai **longitude** dan **latitude** adalah tetap sama (awak boleh agak kenapakan?) tetapi nilai-nilai **temp** dan **humidity** berubah-rubah mengikut pasangan yang sama dengan turutan jujukan array pada **temp1** dan **humidity1**. 
 
@@ -235,7 +235,7 @@ Awak akan dapat mesej seperti di bawah. Mesej di bawah dihasilkan oleh 3 jenis n
 {: refdef}
 <br/>
 
-Jika awak perhatikan mesej pada panel debug dengan lebih teliti, awak akan dapati bahawa nod-nod itu menerima data daripada nod input IBM IoT kemudian memeriksa maklumat berkenaan **temp** dan memastikan samada nilai **temp** adalah dalam lingkungan selamat atau tidak. Tapi hasil yang awak perolehi kesemuanya adalah "**Temperature (23) within safe limits**" bermaksud semuanya adalah selamat. Mengapa?
+Jika awak perhatikan mesej pada panel debug dengan lebih teliti, awak akan dapati bahawa nod-nod itu menerima data daripada nod input IBM IoT kemudian memeriksa maklumat berkenaan **temp** dan memastikan samada nilai **temp** adalah dalam lingkungan selamat atau tidak. Tapi hasil yang awak perolehi kesemuanya adalah "**Temperature () within safe limits**" bermaksud semuanya adalah selamat. Mengapa?
 
 Ok. Jom kita periksa nod-nod ini satu persatu mengikut aliran dari kiri ke kanan. Pertama, klik 2 kali > nod function [temp]. Awak akan nampak kod seperti di bawah.
 
@@ -259,7 +259,7 @@ Tetapan **msg.payload** bermaksud nod ini menerima input dari mesej msg.payload 
 
 ```javascript
 1. Jika nilai temp yang diperolehi daripada nod temp lebih kecil atau sama juga dengan ("<=") nilai 40, pergi ke output 1.
-2. Jika nilai temp yang diperolehi daripada nod temp lebih besar daripada (">") nilai 40, pergi ke output 2.
+2. Jika nilai temp yang diperolehi daripada nod temp lebih besar (">")  daripada nilai 40, pergi ke output 2.
 ```
 
 Fungsi nod switch ini sebenarnya sama dengan penyataan **if else** dalam bahasa pengaturcaraan traditional seperti dalam C, Java, Javascript dan lain-lainnya. Node-RED memudahkan prosesnya tanpa perlu untuk mengaturcara **if else** tersebut. Cuba awak periksa nilai dalam array pada kod di nod **Device payload** ataupun pada jadual **Index, Elemen temp, Elemen humidity** di atas. Ada awak jumpa elemen yang nilainya adalah 40 dan ke atas? Awak akan dapati yang kesemua nilainya adalah lebih kecil daripada 40 kan? Sebab itulah kesemua mesej yang dihasilkan adalah "**Temperature () within safe limits**". Ini adalah kerana kesemua mesej telah dialirkan ke output 1 sahaja. Cuba klik 2 kali pada **nod safe**, awak akan nampak templat seperti berikut.
@@ -290,7 +290,7 @@ Ok ada satu tugasan mudah yang saya nak awak buat. Lakukan prosedur seperti di b
 ```
 Setelah awak membiarkannya selama 5 saat, hentikan paparan mesej di panel debug itu (Awak dah tau camaner nak buat kan). Persoalan yang awak perlu selesaikan, macam mana awak nak kenal pasti mesej yang dipaparkan pada panel debug itu datangnya dari nod **debug output**, **device data** dan **cpu status**? Cuba awak buat kajian sikit maklumat pada panel debug.
 
-Syabas! Saya harap awak sudahpun berjaya memperolehi serba sedikit ilmu asas berkenaan aplikasi IoT node-RED ini. Seterusnya, jom kita belajar sedikit lagi ilmu asas tambahan berkenaan penggunaan node-RED ini yang perlu awak kuasai. Untuk itu sila ke sini.
+Syabas! Saya harap awak sudahpun berjaya memperolehi serba sedikit ilmu asas berkenaan aplikasi IoT node-RED ini. Seterusnya, jom kita belajar sedikit lagi ilmu asas tambahan berkenaan penggunaan node-RED ini. Untuk itu silalah ke [sini]({% post_url 2019-1-8-IoT-nodered-raspberrypi-ibm-cloud-platform4 %}).
 
 
 

@@ -3,7 +3,7 @@ layout: post
 title: Membina Aplikasi IoT dengan Node-RED di atas IBM Cloud Platform - Bab 2. Pengenalan IBM Cloud Platform
 date: 2018-12-13 13:32:20 +0300
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
-img: i-rest.jpg # Add image post (optional)
+img: iot-background-imej.jpg # Add image post (optional)
 fig-caption: # Add figcaption (optional)
 tags: [Camaner, How to, IoT]
 ---
