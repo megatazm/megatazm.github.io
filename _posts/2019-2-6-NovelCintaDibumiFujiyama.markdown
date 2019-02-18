@@ -45,7 +45,7 @@ Fazley mengerutkan dahinya.
 
 <br/>
 {:refdef: style="text-align: center;"}
-![basikalhijau]({{site.baseurl}}/assets/img/basikalhijau.jpg)
+![basikalhijau]({{site.baseurl}}/assets/img/basikalhijau.JPG)
 {: refdef}
 <br/>
 
