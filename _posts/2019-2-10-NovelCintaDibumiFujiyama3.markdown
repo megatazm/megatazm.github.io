@@ -155,6 +155,8 @@ Mereka pun segera melabuhkan punggung di tempat duduk masing-masing. Kemudian, S
 {: refdef}
 <br/>
 
+### [Episod Empat - Kami Di Denda!!]({% post_url 2022-3-4-NovelCintaDibumiFujiyama4 %})
+
 
 
 
